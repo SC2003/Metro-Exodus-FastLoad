@@ -28,24 +28,41 @@ Source Code:
 1. Script.bat:-
 
 echo off
+
 echo Welcome %USERNAME%!
+
 md "00 BackupFiles"
+
 echo Folder Created Successfully.
+
 move legal.webm "00 BackupFiles"
+
 move credits.webm "00 BackupFiles"
+
 echo Files Moved Successfully.
+
 echo >legal.webm
+
 echo >credits.webm
+
 echo Empty Videos Created Successfully.
+
 echo All Done.
+
 pause
 
 2. Revert.bat:-
 
 echo off
+
 echo Welcome %USERNAME%!
+
 echo BackupFiles Folder Found Successfully.
+
 FOR /R "00 BackupFiles" %%i IN (*.webm) DO MOVE "%%i" "%~dp0"
+
 echo Files Moved Successfully.
+
 echo All Done.
+
 pause
